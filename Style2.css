@@ -1,0 +1,81 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    color: white;
+}
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Caja del login */
+.login-box {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Logo */
+.login-logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Encabezado */
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #ff4c29;
+}
+
+/* Campos de texto */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+}
+
+/* Botón de entrar */
+.login-box .btn {
+    background-color: #ff4c29;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-box .btn:hover {
+    background-color: #e63c1f;
+}
+
+/* Botón de regresar */
+.btn-regresar {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.btn-regresar:hover {
+    color: #ffffff;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - DM Motors Garage</title>
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="IMG/DMMOTORS.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+               <h1>
+        <img src="IMG/DMMOTORS.png" alt="Icono de DM Motors Garage" class="icono-logo">
+        DM MOTORS <span>GARAGE</span>
+        </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="servicios.html">SERVICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
+                    <li class="active"><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="login_form.html">LOGIN</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>Por favor contesta nuestro cuestionario de contacto. Para nosotros es importante que te comuniques con nosotros para agendar una cita o aclarar dudas sobre nuestros servicios.</p>
+        </div>
+    </section>
+
+    <section class="contacto">
+        <div class="container">
+            <div class="contacto-form">
+                <h2>Formulario de Contacto</h2>
+                <form id="formulario-contacto1" action="guardar_contacto.php" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="cotizacion">Cotización</option>
+                            <option value="cita">Agendar cita</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+            </div>
+            <div class="contacto-info">
+                <h2>Información de Contacto</h2>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email:</h3><h3>DMMotoric@gmail.com</h3>
+                    
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono:</h3><h3>+52 449-526-2148</h3>
+                    
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dirección:</h3><h3>Calle Munguia #211 Col. Morelos II, Aguascalientes Ags.</h3>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horario</h3><h3>Lunes a Viernes: 9am - 6am Sábado: 9am - 2pm</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.88861477103!2d-99.1678266845339!3d19.4260207461171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1620000000000!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>DM MOTORS GARAGE</h3>
+                <p>Reviviendo la gloria de los autos clásicos desde hace más de 15 años.</p>
+                <p>Siendo lideres por mas de 15 años en la industria automotriz.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> DMMotorsG@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +52 449-526-2148</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábado: 9am - 2pm</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 DM Motors Garage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
