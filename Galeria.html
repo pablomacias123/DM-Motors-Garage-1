@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Motors - Galería de Proyectos y Asistencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbHaRz8J4gyxPjX+yZ7j80O/OQ/5PZ9k61+p+h+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="IMG/DMMOTORS.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>
+                    <img src="IMG/DMMOTORS.png" alt="Icono de DM Motors Garage" class="icono-logo">
+                    DM MOTORS <span>GARAGE</span>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="servicios.html">SERVICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="active"><a href="Galeria.html">Galeria</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: url('IMG/Chevelle SS 1970.jpg');">
+        <div class="container">
+            <h1>Nuestros Proyectos y Asistencia</h1>
+            <p>Explora la excelencia de nuestros trabajos y encuentra respuestas a tus preguntas.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        ---
+        <section id="galeria-proyectos">
+            <h2>Galería de Proyectos</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item" data-full="IMGProyectos/FordF100Lado3.jpg" data-caption="Ford F-100 1970 - Personalización Completa">
+                    <img src="IMG/FordF100.jpg" alt="Proyecto 01">
+                    <div class="galeria-item-info">Ford F-100</div>
+                </div>
+                <div class="galeria-item" data-full="IMGProyectos/ChargerLado1.png" data-caption=" Dodge Charger R/T 1970 - Restauracion Completa">
+                    <img src="IMG/Dodge Charger 1070 RT.jpg" alt="Proyecto 02">
+                    <div class="galeria-item-info">Dodge Charger 1970 R/T</div>
+                </div>
+                <div class="galeria-item" data-full="IMGProyectos/" data-caption="Porsche 911 GT3 - Mejora de Rendimiento">
+                    <img src="IMG/" alt="Proyecto 03">
+                    <div class="galeria-item-info">Porsche 911 GT3</div>
+                </div>
+                <div class="galeria-item" data-full="IMGProyectos/" data-caption="BMW M4 - Restauración Interior">
+                    <img src="IMG/" alt="Proyecto 04">
+                    <div class="galeria-item-info">BMW M4</div>
+                </div>
+                <div class="galeria-item" data-full="IMGProyectos/" data-caption="Audi R8 - Instalación de Kit Aerodinámico">
+                    <img src="IMG/" alt="Proyecto 05">
+                    <div class="galeria-item-info">Audi R8</div>
+                </div>
+                <div class="galeria-item" data-full="IMGProyectos/" data-caption="Chevrolet Corvette C8 - Protección Cerámica">
+                    <img src="IMG/" alt="Proyecto 06">
+                    <div class="galeria-item-info">Corvette C8</div>
+                </div>
+                </div>
+        </section>
+
+        <div id="projectLightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightboxImg" src="" alt="Proyecto DM Motors">
+                <div id="lightboxCaption" class="lightbox-caption"></div>
+                <div class="lightbox-nav">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        ---
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué tipo de vehículos trabajan en DM Motors?</div>
+                    <div class="faq-answer">
+                        <p>En DM Motors nos especializamos en una amplia gama de vehículos, desde deportivos de alto rendimiento hasta sedanes de lujo y camionetas, ofreciendo servicios personalizados para cada uno.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto tiempo tarda un proyecto típico?</div>
+                    <div class="faq-answer">
+                        <p>El tiempo de un proyecto varía según su complejidad y el alcance de los servicios requeridos. Una vez evaluado su vehículo y definidas sus necesidades, le proporcionaremos un cronograma detallado.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Ofrecen garantía en sus servicios?</div>
+                    <div class="faq-answer">
+                        <p>Sí, en DM Motors ofrecemos garantía en todos nuestros servicios y piezas instaladas. Los detalles específicos de la garantía se le proporcionarán al momento de la cotización.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo puedo solicitar una cotización?</div>
+                    <div class="faq-answer">
+                        <p>Puede solicitar una cotización a través de nuestro formulario de contacto en línea, enviándonos un correo electrónico o llamándonos directamente. Uno de nuestros expertos se pondrá en contacto con usted a la brevedad.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué métodos de pago aceptan?</div>
+                    <div class="faq-answer">
+                        <p>Aceptamos diversas formas de pago, incluyendo transferencias bancarias, tarjetas de crédito/débito y efectivo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Realizan trabajos personalizados?</div>
+                    <div class="faq-answer">
+                        <p>¡Absolutamente! Nos especializamos en proyectos personalizados para cumplir con las visiones únicas de cada cliente. Contáctenos para discutir su idea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="chat-live">
+        <button class="chat-button" onclick="toggleChat()">💬</button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                Chat DM Motors
+                <span class="close-chat" onclick="toggleChat()">&times;</span>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    ¡Hola! Bienvenido a DM Motors. ¿En qué podemos ayudarte hoy? Puedes seleccionar una de las opciones a continuación o escribir tu pregunta.
+                </div>
+                <div class="chat-options">
+                    <button class="chat-option-button" onclick="sendPredefinedMessage('services')">Información de servicios</button>
+                    <button class="chat-option-button" onclick="sendPredefinedMessage('quote')">Solicitar cotización</button>
+                    <button class="chat-option-button" onclick="sendPredefinedMessage('hours_location')">Horarios y ubicación</button>
+                    <button class="chat-option-button" onclick="sendPredefinedMessage('warranty')">Garantía</button>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="handleChatInput(event)">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>DM MOTORS GARAGE</h3>
+                <p>Reviviendo la gloria de los autos clásicos desde hace más de 15 años.</p>
+                <p>Siendo líderes por más de 15 años en la industria automotriz.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> DMMotorsG@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +52 449-526-2148</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábado: 9am - 2pm</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 DM Motors Garage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- JavaScript para el Menú Hamburguesa ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navUl.classList.toggle('active');
+                });
+            }
+
+            // Cerrar menú si se hace clic fuera o en un enlace (para móviles)
+            document.addEventListener('click', (event) => {
+                if (!navUl.contains(event.target) && !menuToggle.contains(event.target) && navUl.classList.contains('active')) {
+                    navUl.classList.remove('active');
+                }
+            });
+
+            // Cerrar menú al hacer clic en un enlace (para móviles)
+            navUl.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 992) { // Ajusta este breakpoint al de tu CSS
+                        navUl.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // --- JavaScript para Scroll del Header ---
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+
+        // --- Funcionalidad para la Galería (Lightbox) ---
+        let slideIndex = 0;
+        const galleryItems = Array.from(document.querySelectorAll('.galeria-item'));
+        const lightbox = document.getElementById('projectLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+
+        function openLightbox(index) {
+            slideIndex = index;
+            showSlide(slideIndex);
+            lightbox.style.display = "flex"; // Usar flex para centrar
+            document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+            document.body.style.overflow = ''; // Restaura el scroll del fondo
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex >= galleryItems.length) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = galleryItems.length - 1; }
+            showSlide(slideIndex);
+        }
+
+        function showSlide(index) {
+            const currentItem = galleryItems[index];
+            lightboxImg.src = currentItem.dataset.full;
+            lightboxCaption.textContent = currentItem.dataset.caption;
+        }
+
+        // Cierra el lightbox al hacer clic en el botón de cerrar
+        document.querySelector('.close-lightbox').onclick = closeLightbox;
+
+        // Cierra el lightbox al hacer clic fuera de la imagen (solo en el fondo oscuro)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+
+        // --- Funcionalidad para FAQ (Acordeón) ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.closest('.faq-item');
+                faqItem.classList.toggle('active');
+
+                const answer = question.nextElementSibling;
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.paddingTop = '15px'; // Agrega padding cuando está abierto
+                    answer.style.paddingBottom = '15px'; // Agrega padding cuando está abierto
+                } else {
+                    answer.style.maxHeight = '0';
+                    answer.style.paddingTop = '0'; // Quita padding cuando está cerrado
+                    answer.style.paddingBottom = '0'; // Quita padding cuando está cerrado
+                }
+            });
+        });
+
+        // --- Funcionalidad para Chat en Vivo ---
+        const chatWindow = document.getElementById('chatWindow');
+        const chatBody = document.getElementById('chatBody');
+        const chatInput = document.getElementById('chatInput');
+
+        const predefinedResponses = {
+            'services': "DM Motors ofrece servicios de personalización, restauración, detailing premium y mejora de rendimiento. ¿Le gustaría saber más sobre alguno en particular?",
+            'quote': "Para una cotización personalizada, por favor, visite nuestra sección 'Contacto' y complete el formulario con los detalles de su proyecto. Le responderemos a la brevedad.",
+            'hours_location': "Nuestro horario de atención es de lunes a viernes de 9:00 AM a 6:00 PM. Nos encontramos en [Dirección de DM Motors]. ¡Esperamos su visita!",
+            'warranty': "Sí, en DM Motors ofrecemos garantía en todos nuestros servicios y piezas instaladas. Los detalles específicos de la garantía se le proporcionarán al momento de la cotización.",
+            'default': "Entendido. Para preguntas más detalladas, por favor, envíanos un correo a info@dmmotors.com o llámanos al (555) 123-4567. Uno de nuestros especialistas se comunicará contigo."
+        };
+
+        function toggleChat() {
+            chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+            if (chatWindow.style.display === 'flex') {
+                chatBody.scrollTop = chatBody.scrollHeight; // Scroll to bottom on open
+            }
+        }
+
+        function addMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message');
+            messageDiv.classList.add(sender);
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight; // Scroll to bottom
+        }
+
+        function sendPredefinedMessage(type) {
+            const userMessage = event.target.textContent; // Get text from button
+            addMessage(userMessage, 'user');
+            setTimeout(() => {
+                addMessage(predefinedResponses[type] || predefinedResponses['default'], 'bot');
+            }, 500);
+        }
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message !== '') {
+                addMessage(message, 'user');
+                chatInput.value = '';
+
+                // Simular respuesta del bot (simple match o default)
+                setTimeout(() => {
+                    let botResponse = predefinedResponses['default'];
+                    const lowerMessage = message.toLowerCase();
+
+                    if (lowerMessage.includes('servicio') || lowerMessage.includes('servicios')) {
+                        botResponse = predefinedResponses['services'];
+                    } else if (lowerMessage.includes('cotiza') || lowerMessage.includes('precio')) {
+                        botResponse = predefinedResponses['quote'];
+                    } else if (lowerMessage.includes('horario') || lowerMessage.includes('ubicacion') || lowerMessage.includes('direccion')) {
+                        botResponse = predefinedResponses['hours_location'];
+                    } else if (lowerMessage.includes('garantia')) {
+                        botResponse = predefinedResponses['warranty'];
+                    }
+                    addMessage(botResponse, 'bot');
+                }, 1000); // Retraso para simular "escritura" del bot
+            }
+        }
+
+        function handleChatInput(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+    </script>
+</body>
+</html>

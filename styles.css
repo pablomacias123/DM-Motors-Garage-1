@@ -1,0 +1,738 @@
+ /* --- Variables CSS --- */
+        :root {
+            --primary-color: #d82c2c; /* Tu rojo principal */
+            --secondary-color: #333; /* Tu gris oscuro secundario */
+            --accent-color: #f5a623; /* Tu color de acento (naranja/amarillo) */
+            --light-color: #f8f8f8; /* Tu color de fondo claro */
+            --dark-color: #222; /* Tu color de texto oscuro */
+            --text-color: #444; /* Tu color de texto principal */
+            --text-light: #777; /* Tu color de texto claro */
+
+            /* Ajustes para la galería/chat para que combinen con el tema oscuro/claro */
+            --dm-black: #1a1a1a;
+            --dm-dark-gray: var(--secondary-color); /* Usamos tu secondary-color */
+            --dm-medium-gray: #555555; /* Un gris intermedio para fondos internos */
+            --dm-light-gray: var(--light-color); /* Usamos tu light-color para texto claro */
+            --dm-white: #ffffff;
+            --dm-accent-red: var(--primary-color); /* Usamos tu primary-color como acento */
+            
+            --dm-text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tu fuente principal */
+            --dm-code-font: 'Roboto Mono', monospace; /* Fuente para elementos de código si es necesario */
+        }
+
+        /* --- Estilos Generales --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--dm-text-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--dm-black); /* Fondo oscuro principal para el cuerpo */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--dm-white); /* Color de texto blanco para los títulos en secciones oscuras */
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-small {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-small:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--dark-color); /* Color oscuro para el logo en el header blanco */
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 .icono-logo {
+            height: 40px; /* Ajusta el tamaño del icono */
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--dark-color); /* Color oscuro para los links de navegación */
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover:after,
+        nav ul li.active a:after {
+            width: 100%;
+        }
+
+        nav ul li.active a {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        /* Hero Section (Ajustado para no estar en esta página) */
+        /*
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG/Lincoln Continental2.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        */
+
+        /* Estilos de las secciones que ya tenías */
+        section {
+            padding: 80px 0;
+            margin-top: 70px; /* Para que el contenido no quede debajo del header fijo */
+        }
+        
+        section:nth-of-type(odd) {
+            background-color: var(--dm-black);
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--dm-dark-gray);
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        section h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Galería de Proyectos --- */
+        #galeria-proyectos {
+            background-color: var(--dm-black); /* Fondo para la sección de galería */
+            padding: 50px 0;
+            border-radius: 8px; /* Si quieres bordes redondeados en la sección */
+            margin-bottom: 60px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .galeria-item {
+            background-color: var(--dm-dark-gray); /* Fondo para cada item de la galería */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .galeria-item-info {
+            padding: 15px;
+            text-align: center;
+            color: var(--dm-light-gray);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        /* Lightbox/Modal para la galería (Necesita JS para la funcionalidad completa) */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.95); /* Black w/ more opacity */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: var(--dm-white);
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 70vh; /* Adjust as needed */
+            display: block;
+            object-fit: contain;
+            border: 2px solid var(--primary-color);
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: var(--dm-white);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 3em;
+            font-weight: bold;
+            padding: 0 15px;
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+
+        .prev:hover, .next:hover {
+            color: var(--dm-white);
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: var(--primary-color);
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-lightbox:hover,
+        .close-lightbox:focus {
+            color: var(--dm-white);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* --- Preguntas Frecuentes (FAQ) --- */
+        #faq {
+            background-color: var(--dm-dark-gray); /* Fondo para la sección FAQ */
+            padding: 50px 0;
+            border-radius: 8px; /* Si quieres bordes redondeados en la sección */
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid var(--dm-medium-gray);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: var(--dm-medium-gray);
+            color: var(--dm-white);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: var(--primary-color);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+            transform: rotate(180deg);
+            color: var(--dm-white);
+        }
+
+        .faq-answer {
+            background-color: var(--dm-black);
+            color: var(--dm-light-gray);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed for content */
+            padding: 15px 20px;
+        }
+
+        /* --- Chat en Vivo --- */
+        #chat-live {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .chat-button {
+            background-color: var(--primary-color);
+            color: var(--dm-white);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.05);
+            background-color: #c0392b; /* Darker red */
+        }
+
+        .chat-window {
+            background-color: var(--dm-dark-gray);
+            border: 1px solid var(--dm-medium-gray);
+            border-radius: 10px;
+            width: 320px;
+            height: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            display: none; /* Hidden by default, show with JS */
+            flex-direction: column;
+            overflow: hidden;
+            position: absolute;
+            bottom: 80px; /* Above the button */
+            right: 0;
+        }
+
+        .chat-header {
+            background-color: var(--dm-medium-gray);
+            color: var(--dm-white);
+            padding: 15px;
+            border-bottom: 1px solid var(--dm-black);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .chat-header .close-chat {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .chat-header .close-chat:hover {
+            color: var(--dm-white);
+        }
+
+        .chat-body {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            color: var(--dm-light-gray);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chat-message {
+            background-color: var(--dm-medium-gray);
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 80%;
+            align-self: flex-start;
+        }
+        .chat-message.bot {
+            background-color: var(--primary-color);
+            color: var(--dm-white);
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+        .chat-message.user {
+            background-color: var(--dm-medium-gray);
+            color: var(--dm-white);
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+
+        .chat-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .chat-option-button {
+            background-color: var(--dm-medium-gray);
+            color: var(--dm-white);
+            border: 1px solid var(--primary-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .chat-option-button:hover {
+            background-color: var(--primary-color);
+            border-color: var(--dm-white);
+        }
+
+        .chat-input {
+            border-top: 1px solid var(--dm-medium-gray);
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid var(--dm-medium-gray);
+            border-radius: 5px;
+            background-color: var(--dm-black);
+            color: var(--dm-white);
+            font-family: var(--dm-text-font);
+        }
+
+        .chat-input button {
+            background-color: var(--primary-color);
+            color: var(--dm-white);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .chat-input button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-section p {
+            color: var(--light-color);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-section i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            border-top: 1px solid var(--text-light);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        /* --- Media Queries para Responsividad --- */
+        @media (max-width: 992px) {
+            nav ul {
+                display: none; /* Oculta el menú en pantallas pequeñas */
+                flex-direction: column;
+                position: absolute;
+                top: 80px; /* Debajo del header */
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            nav ul.active {
+                display: flex; /* Muestra el menú cuando está activo */
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block; /* Muestra el icono de menú */
+            }
+
+            .about-preview .container {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+                text-align: center;
+            }
+
+            .about-content h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .hero {
+                margin-top: 80px; /* Ajusta si el header es más grande */
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2em;
+            }
+
+            .galeria-grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+                padding: 10px;
+            }
+
+            .chat-window {
+                width: 90%;
+                height: 70vh;
+                bottom: 100px;
+                right: 5%;
+                left: 5%;
+                margin: auto;
+            }
+
+            .chat-button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8em;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-section {
+                text-align: center;
+            }
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
