@@ -172,7 +172,7 @@ nav ul li.active a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG/Lincoln\ Continental2.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/lincoln\ Continental2.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -296,7 +296,7 @@ nav ul li.active a {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG/Chevelle\ SS\ 1970.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/chevelle\ SS\ 1970.jpg') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     align-items: center;
@@ -693,7 +693,7 @@ nav ul li.active a {
 .cta {
     padding: 80px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMG/Ford\ Gran\ Torino.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/ford\ Gran\ Torino.jpg') no-repeat center center/cover;
     color: white;
 }
 
