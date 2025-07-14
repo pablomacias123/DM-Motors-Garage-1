@@ -19,6 +19,6 @@ services:
       MYSQL_PASSWORD: userpass
     volumes:
       - db_data:/var/lib/mysql
-
+        ./dm_motors.sql:/docker-entrypoint-initdb.d/dm_motors.sql
 volumes:
   db_data:
