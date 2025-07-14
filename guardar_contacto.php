@@ -1,6 +1,6 @@
 <?php
 // Conexión
-$conexion = new mysqli("localhost", "root", "", "dm_motors");
+$conexion = new mysqli("db", "user", "userpass", "dmmotors");
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
