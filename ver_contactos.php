@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-$conexion = new mysqli("db", "user", "userpass", "dm_motors");
+$conexion = new mysqli("localhost", "root", "", "dm_motors");
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
